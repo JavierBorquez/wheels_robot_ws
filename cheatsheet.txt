@@ -1,0 +1,22 @@
+ssh robot@wheels.local
+pass: robot
+
+######################################################################
+#VVV all of this commands are ran automaticly on booting the robot VVV
+
+#access to usb (robot)
+sudo chmod 666 /dev/ttyUSB0
+
+#source ros2 and your ws (robot)
+source wheels_ws/install/setup.bash
+
+#run better listener (robot)
+ros2 run wheels_basic ind_wheel_ctrl_sub
+######################################################################
+
+
+#publish (pc) something like this to control
+ros2 topic pub /wheel_cmd std_msgs/msg/String "data: 'm 100 100'"
+
+#or use the gamepad to publish using the analog sticks
+ros2 run wheels_ctrl gamepad_pub 
