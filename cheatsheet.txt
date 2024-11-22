@@ -20,3 +20,9 @@ ros2 topic pub /wheel_cmd std_msgs/msg/String "data: 'm 100 100'"
 
 #or use the gamepad to publish using the analog sticks
 ros2 run wheels_ctrl gamepad_pub 
+
+#or while having the vicon_resend running run 
+
+ros2 run wheels_ctrl vicon_gamepad_logger 
+
+#this one will only read the gamepad when getting and odometry message  

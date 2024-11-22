@@ -23,6 +23,7 @@ setup(
             'hello_world = wheels_ctrl.hello_world:main',
             'basic_pub = wheels_ctrl.basic_pub:main',
             'gamepad_pub = wheels_ctrl.gamepad_pub:main',
+            'vicon_gamepad_logger = wheels_ctrl.vicon_gamepad_logger:main',
         ],
     },
 )
